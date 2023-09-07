@@ -7,5 +7,9 @@ namespace WebAPI.Controllers
     [ApiController]
     public class ProfileController : ControllerBase
     {
+        public IActionResult GetProfile()
+        {
+            return Ok();
+        }
     }
 }
