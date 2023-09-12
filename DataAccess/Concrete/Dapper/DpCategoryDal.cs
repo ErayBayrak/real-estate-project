@@ -50,6 +50,18 @@ namespace DataAccess.Concrete.Dapper
             }
         }
 
+        public async Task<ResultCategoryDto> GetById(int id)
+        {
+            string query = "Select * From Category Where Id=@categoryId";
+            var parameters = new DynamicParameters();
+            parameters.Add("categoryId", id);
+            using (var connection = _context.CreateConnection())
+            {
+                var value = await connection.QueryFirstOrDefaultAsync<ResultCategoryDto>(query,parameters);
+                return value;
+            }
+        }
+
         public async void UpdateCategory(UpdateCategoryDto categoryDto)
         {
             string query = "Update Category Set Name=@categoryName,Status=@categoryStatus Where Id=@categoryId";

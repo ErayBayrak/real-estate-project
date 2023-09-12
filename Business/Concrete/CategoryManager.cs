@@ -60,6 +60,19 @@ namespace Business.Concrete
             
         }
 
+        public Task<ResultCategoryDto> GetById(int id)
+        {
+            try
+            {
+                return _categoryDal.GetById(id);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public void UpdateCategory(UpdateCategoryDto categoryDto)
         {
             try
