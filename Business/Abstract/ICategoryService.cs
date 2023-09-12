@@ -10,5 +10,6 @@ namespace Business.Abstract
     public interface ICategoryService
     {
         Task<List<ResultCategoryDto>> GetAllCategories();
+        void AddCategory(CreateCategoryDto categoryDto);
     }
 }

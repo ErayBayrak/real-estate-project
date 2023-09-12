@@ -16,6 +16,19 @@ namespace DataAccess.Concrete.Dapper
         {
             _context = context;
         }
+
+        public async void AddCategory(CreateCategoryDto categoryDto)
+        {
+            string query = "insert into Category (Name,Status) values (@categoryName,@categoryStatus)";
+            var parameters = new DynamicParameters();
+            parameters.Add("@categoryName",categoryDto.Name);
+            parameters.Add("@categoryStatus", true);
+            using (var connection = _context.CreateConnection())
+            {
+                await connection.ExecuteAsync(query, parameters);
+            }
+        }
+
         public async Task<List<ResultCategoryDto>> GetAllCategories()
         {
             string query = "Select * From Category";
@@ -25,5 +38,6 @@ namespace DataAccess.Concrete.Dapper
                 return values.ToList();
             }
         }
+        
     }
 }

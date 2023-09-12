@@ -10,5 +10,6 @@ namespace DataAccess.Abstract
     public interface ICategoryDal
     {
         Task<List<ResultCategoryDto>> GetAllCategories();
+        void AddCategory(CreateCategoryDto categoryDto);
     }
 }

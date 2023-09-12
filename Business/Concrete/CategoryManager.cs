@@ -18,6 +18,11 @@ namespace Business.Concrete
             _categoryDal = categoryDal;
         }
 
+        public void AddCategory(CreateCategoryDto categoryDto)
+        {
+            _categoryDal.AddCategory(categoryDto);
+        }
+
         public Task<List<ResultCategoryDto>> GetAllCategories()
         {
             return _categoryDal.GetAllCategories();

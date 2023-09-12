@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Core.DTOs.Category;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,6 +21,12 @@ namespace WebAPI.Controllers
         {
             var allCategories = await _categoryService.GetAllCategories();
             return Ok(allCategories);
+        }
+        [HttpPost("createcategory")]
+        public async Task<IActionResult> Add(CreateCategoryDto categoryDto)
+        {
+            _categoryService.AddCategory(categoryDto);
+            return Ok(categoryDto);
         }
     }
 }
