@@ -11,5 +11,7 @@ namespace Business.Abstract
     {
         Task<List<ResultCategoryDto>> GetAllCategories();
         void AddCategory(CreateCategoryDto categoryDto);
+        void DeleteCategory(int id);
+        void UpdateCategory(UpdateCategoryDto categoryDto);
     }
 }

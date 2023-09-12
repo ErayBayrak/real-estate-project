@@ -20,12 +20,57 @@ namespace Business.Concrete
 
         public void AddCategory(CreateCategoryDto categoryDto)
         {
-            _categoryDal.AddCategory(categoryDto);
+            try
+            {
+                _categoryDal.AddCategory(categoryDto);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
+        }
+
+        public void DeleteCategory(int id)
+        {
+            try
+            {
+                _categoryDal.DeleteCategory(id);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
 
         public Task<List<ResultCategoryDto>> GetAllCategories()
         {
-            return _categoryDal.GetAllCategories();
+            try
+            {
+                return _categoryDal.GetAllCategories();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
+        }
+
+        public void UpdateCategory(UpdateCategoryDto categoryDto)
+        {
+            try
+            {
+                _categoryDal.UpdateCategory(categoryDto);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

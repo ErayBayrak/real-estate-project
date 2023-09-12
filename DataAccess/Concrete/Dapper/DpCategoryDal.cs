@@ -29,6 +29,17 @@ namespace DataAccess.Concrete.Dapper
             }
         }
 
+        public async void DeleteCategory(int id)
+        {
+            string query = "Delete from Category where Id=@categoryId";
+            var parameters = new DynamicParameters();
+            parameters.Add("@categoryId", id);
+            using (var connection = _context.CreateConnection())
+            {
+                await connection.ExecuteAsync(query, parameters);
+            }
+        }
+
         public async Task<List<ResultCategoryDto>> GetAllCategories()
         {
             string query = "Select * From Category";
@@ -38,6 +49,18 @@ namespace DataAccess.Concrete.Dapper
                 return values.ToList();
             }
         }
-        
+
+        public async void UpdateCategory(UpdateCategoryDto categoryDto)
+        {
+            string query = "Update Category Set Name=@categoryName,Status=@categoryStatus Where Id=@categoryId";
+            var parameters = new DynamicParameters();
+            parameters.Add("@categoryName", categoryDto.Name);
+            parameters.Add("@categoryStatus", categoryDto.Status);
+            parameters.Add("@categoryId", categoryDto.Id);
+            using (var connection = _context.CreateConnection())
+            {
+               await connection.ExecuteAsync(query, parameters);
+            }
+        }
     }
 }
