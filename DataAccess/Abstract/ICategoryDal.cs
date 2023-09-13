@@ -1,4 +1,5 @@
 ﻿using Core.DTOs.Category;
+using DataAccess.Repository.Dapper.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,12 +8,8 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-    public interface ICategoryDal
+    public interface ICategoryDal:IEntityRepositoryDal<ResultCategoryDto>
     {
-        Task<List<ResultCategoryDto>> GetAllCategories();
-        void AddCategory(CreateCategoryDto categoryDto);
-        void DeleteCategory(int id);
-        void UpdateCategory(UpdateCategoryDto categoryDto);
-        Task<ResultCategoryDto> GetById(int id);
+        
     }
 }

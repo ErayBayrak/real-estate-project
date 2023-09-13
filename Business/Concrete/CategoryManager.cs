@@ -18,11 +18,11 @@ namespace Business.Concrete
             _categoryDal = categoryDal;
         }
 
-        public void AddCategory(CreateCategoryDto categoryDto)
+        public void AddCategory(ResultCategoryDto categoryDto)
         {
             try
             {
-                _categoryDal.AddCategory(categoryDto);
+                _categoryDal.Add(categoryDto);
             }
             catch (Exception)
             {
@@ -36,7 +36,7 @@ namespace Business.Concrete
         {
             try
             {
-                _categoryDal.DeleteCategory(id);
+                _categoryDal.Delete(id);
             }
             catch (Exception)
             {
@@ -50,7 +50,7 @@ namespace Business.Concrete
         {
             try
             {
-                return _categoryDal.GetAllCategories();
+                return _categoryDal.GetAll();
             }
             catch (Exception)
             {
@@ -73,11 +73,11 @@ namespace Business.Concrete
             }
         }
 
-        public void UpdateCategory(UpdateCategoryDto categoryDto)
+        public void UpdateCategory(ResultCategoryDto categoryDto)
         {
             try
             {
-                _categoryDal.UpdateCategory(categoryDto);
+                _categoryDal.Update(categoryDto);
             }
             catch (Exception)
             {
