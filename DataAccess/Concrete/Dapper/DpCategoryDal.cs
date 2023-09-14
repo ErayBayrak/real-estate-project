@@ -32,12 +32,19 @@ namespace DataAccess.Concrete.Dapper
 
         public async void Delete(int id)
         {
+            var removedValue = await GetById(id);
+            if (removedValue != null) { 
             string query = "Delete from Category where Id=@categoryId";
             var parameters = new DynamicParameters();
             parameters.Add("@categoryId", id);
             using (var connection = _context.CreateConnection())
             {
                 await connection.ExecuteAsync(query, parameters);
+            }
+            }
+            else
+            {
+                throw new Exception("Değer bulunamadı."); 
             }
         }
 
