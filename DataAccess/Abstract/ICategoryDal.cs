@@ -8,8 +8,12 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-    public interface ICategoryDal:IEntityRepositoryDal<ResultCategoryDto>
+    public interface ICategoryDal
     {
-        
+        Task<List<ResultCategoryDto>> GetAll();
+        void Add(CreateCategoryDto categoryDto);
+        void Delete(int id);
+        void Update(UpdateCategoryDto categoryDto);
+        Task<ResultCategoryDto> GetById(int id);
     }
 }

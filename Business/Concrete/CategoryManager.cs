@@ -1,6 +1,8 @@
 ﻿using Business.Abstract;
+using Business.Repository.Dapper.Concrete;
 using Core.DTOs.Category;
 using DataAccess.Abstract;
+using DataAccess.Repository.Dapper.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +20,7 @@ namespace Business.Concrete
             _categoryDal = categoryDal;
         }
 
-        public void AddCategory(ResultCategoryDto categoryDto)
+        public void Add(CreateCategoryDto categoryDto)
         {
             try
             {
@@ -29,10 +31,10 @@ namespace Business.Concrete
 
                 throw;
             }
-            
+
         }
 
-        public void DeleteCategory(int id)
+        public void Delete(int id)
         {
             try
             {
@@ -43,10 +45,10 @@ namespace Business.Concrete
 
                 throw;
             }
-            
+
         }
 
-        public Task<List<ResultCategoryDto>> GetAllCategories()
+        public Task<List<ResultCategoryDto>> GetAll()
         {
             try
             {
@@ -57,7 +59,7 @@ namespace Business.Concrete
 
                 throw;
             }
-            
+
         }
 
         public Task<ResultCategoryDto> GetById(int id)
@@ -73,7 +75,7 @@ namespace Business.Concrete
             }
         }
 
-        public void UpdateCategory(ResultCategoryDto categoryDto)
+        public void Update(UpdateCategoryDto categoryDto)
         {
             try
             {

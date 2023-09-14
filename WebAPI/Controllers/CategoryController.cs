@@ -19,25 +19,25 @@ namespace WebAPI.Controllers
         [HttpGet("getallcategories")]
         public async Task<IActionResult> GetList()
         {
-            var allCategories = await _categoryService.GetAllCategories();
+            var allCategories = await _categoryService.GetAll();
             return Ok(allCategories);
         }
         [HttpPost("createcategory")]
         public async Task<IActionResult> Add(CreateCategoryDto categoryDto)
         {
-            _categoryService.AddCategory(categoryDto);
+            _categoryService.Add(categoryDto);
             return Ok(categoryDto);
         }
         [HttpDelete]
         public async Task<IActionResult> Delete(int id)
         {
-            _categoryService.DeleteCategory(id);
+            _categoryService.Delete(id);
             return Ok("Başarıyla silindi.");
         }
         [HttpPut]
         public async Task<IActionResult> Update(UpdateCategoryDto categoryDto)
         {
-            _categoryService.UpdateCategory(categoryDto);
+            _categoryService.Update(categoryDto);
             return Ok(categoryDto);
         }
         [HttpGet("getbyid")]

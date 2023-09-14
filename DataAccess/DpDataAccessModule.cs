@@ -1,5 +1,8 @@
-﻿using DataAccess.Abstract;
+﻿using Core.DTOs.Category;
+using DataAccess.Abstract;
 using DataAccess.Concrete.Dapper;
+using DataAccess.Repository.Dapper.Abstract;
+using DataAccess.Repository.Dapper.Concrete;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
