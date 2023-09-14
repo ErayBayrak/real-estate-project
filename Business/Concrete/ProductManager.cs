@@ -62,6 +62,19 @@ namespace Business.Concrete
 
         }
 
+        public Task<List<ResultProductWithCategoryDto>> GetAllWithCategories()
+        {
+            try
+            {
+                return _productDal.GetAllWithCategory();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public Task<ResultProductDto> GetById(int id)
         {
             try

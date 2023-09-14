@@ -14,5 +14,6 @@ namespace Business.Abstract
         void Delete(int id);
         void Update(UpdateProductDto dto);
         Task<ResultProductDto> GetById(int id);
+        Task<List<ResultProductWithCategoryDto>> GetAllWithCategories();
     }
 }
