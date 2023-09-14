@@ -23,24 +23,24 @@ namespace WebAPI.Controllers
             return Ok(allCategories);
         }
         [HttpPost("createcategory")]
-        public async Task<IActionResult> Add(CreateCategoryDto categoryDto)
+        public IActionResult Add(CreateCategoryDto categoryDto)
         {
             _categoryService.Add(categoryDto);
             return Ok(categoryDto);
         }
         [HttpDelete]
-        public async Task<IActionResult> Delete(int id)
+        public IActionResult Delete(int id)
         {
             _categoryService.Delete(id);
             return Ok("Başarıyla silindi.");
         }
         [HttpPut]
-        public async Task<IActionResult> Update(UpdateCategoryDto categoryDto)
+        public IActionResult Update(UpdateCategoryDto categoryDto)
         {
             _categoryService.Update(categoryDto);
             return Ok(categoryDto);
         }
-        [HttpGet("getbyid")]
+        [HttpGet("getbyid/{id}")]
         public async Task<IActionResult> GetById(int id)
         {
             var category = await _categoryService.GetById(id);
