@@ -20,7 +20,7 @@ namespace WebAPI.Controllers
         public async Task<IActionResult> GetList()
         {
             var allCategories = await _categoryService.GetAll();
-            return Ok(allCategories);
+            return Ok(allCategories); 
         }
         [HttpPost("createcategory")]
         public IActionResult Add(CreateCategoryDto categoryDto)
