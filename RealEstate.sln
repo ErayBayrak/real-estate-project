@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{44E85FE6-25B5-44A1-99E3-114F973E0E0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{44E85FE6-25B5-44A1-99E3-114F973E0E0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectUI", "ProjectUI\ProjectUI.csproj", "{6E4F003B-1980-463B-9BC9-9ED1C1D01D02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectUI", "ProjectUI\ProjectUI.csproj", "{6E4F003B-1980-463B-9BC9-9ED1C1D01D02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{A7A2369B-CB1C-486D-AACB-68047B72683C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{A7A2369B-CB1C-486D-AACB-68047B72683C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{6C5EB206-9365-4B95-A516-4F6A8F9C4053}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{6C5EB206-9365-4B95-A516-4F6A8F9C4053}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{92C06585-F57D-4BF9-9E9B-601733B7EB48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{92C06585-F57D-4BF9-9E9B-601733B7EB48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{2EE27F65-ED48-4584-B209-97BA564AB5B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{2EE27F65-ED48-4584-B209-97BA564AB5B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI", "WebUI\WebUI.csproj", "{19654471-1CB5-492E-BEF0-F47EAB539284}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{2EE27F65-ED48-4584-B209-97BA564AB5B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EE27F65-ED48-4584-B209-97BA564AB5B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EE27F65-ED48-4584-B209-97BA564AB5B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19654471-1CB5-492E-BEF0-F47EAB539284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19654471-1CB5-492E-BEF0-F47EAB539284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19654471-1CB5-492E-BEF0-F47EAB539284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19654471-1CB5-492E-BEF0-F47EAB539284}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
