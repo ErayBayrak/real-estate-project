@@ -19,6 +19,7 @@ namespace DataAccess
             
             services.AddScoped<ICategoryDal, DpCategoryDal>();
             services.AddScoped<IProductDal, DpProductDal>();
+            services.AddScoped<IWhoWeAreDetailDal, DpWhoWeAreDetailDal>();
             services.AddScoped<Context>();
         }
     }

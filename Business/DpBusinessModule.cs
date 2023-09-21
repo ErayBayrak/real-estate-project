@@ -23,8 +23,7 @@ namespace Business
             services.AddScopeDAL();
             services.AddScoped<ICategoryService,CategoryManager>();
             services.AddScoped<IProductService,ProductManager>();
-            
-            
+            services.AddScoped<IWhoWeAreDetailService,WhoWeAreDetailManager>();
         }
     }
 }
