@@ -50,9 +50,14 @@ namespace DataAccess.Concrete.Dapper
             }
         }
 
-        public Task<List<ResultWhoWeAreDetailDto>> GetAll()
+        public async Task<List<ResultWhoWeAreDetailDto>> GetAll()
         {
-            throw new NotImplementedException();
+            string query = "Select * From WhoWeAreDetail";
+            using (var connection = _context.CreateConnection())
+            {
+                var values = await connection.QueryAsync<ResultWhoWeAreDetailDto>(query);
+                return values.ToList();
+            }
         }
 
         public async Task<ResultWhoWeAreDetailDto> GetById(int id)
