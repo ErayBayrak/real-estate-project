@@ -63,7 +63,7 @@ namespace DataAccess.Concrete.Dapper
 
         public async Task<List<ResultProductWithCategoryDto>> GetAllWithCategory()
         {
-            string query = "Select Product.Id,Title,Price,City,District,Name From Product inner join Category on Product.CategoryId=Category.Id";
+            string query = "Select Product.Id,Title,Price,City,District,Name,Type,Address,CoverImage From Product inner join Category on Product.CategoryId=Category.Id";
             using (var connection = _context.CreateConnection())
             {
                 var values = await connection.QueryAsync<ResultProductWithCategoryDto>(query);
