@@ -21,7 +21,7 @@ namespace DataAccess.Concrete.Dapper
             string query = "insert into Service (Name,Status) values (@name,@status)";
             var parameters = new DynamicParameters();
             parameters.Add("@name", dto.Name);
-            parameters.Add("@status", dto.Status);
+            parameters.Add("@status", true);
             using (var connection = _context.CreateConnection())
             {
                 await connection.ExecuteAsync(query,parameters);
@@ -55,12 +55,12 @@ namespace DataAccess.Concrete.Dapper
 
         public async Task<ResultServiceDto> GetById(int id)
         {
-            string query = "select * from Service where Id=@id";
+            string query = "select * from Service where Id=@serviceId";
             var parameters = new DynamicParameters();
-            parameters.Add("@id", id);
+            parameters.Add("@serviceId", id);
             using (var connection = _context.CreateConnection())
             {
-                var value = await connection.QueryFirstOrDefaultAsync<ResultServiceDto>(query);
+                var value = await connection.QueryFirstOrDefaultAsync<ResultServiceDto>(query,parameters);
                 return value;
             }
         }

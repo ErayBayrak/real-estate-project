@@ -24,6 +24,7 @@ namespace Business
             services.AddScoped<ICategoryService,CategoryManager>();
             services.AddScoped<IProductService,ProductManager>();
             services.AddScoped<IWhoWeAreDetailService,WhoWeAreDetailManager>();
+            services.AddScoped<IServiceService,ServiceManager>();
         }
     }
 }
