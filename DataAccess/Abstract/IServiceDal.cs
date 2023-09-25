@@ -1,4 +1,4 @@
-﻿using Core.DTOs.Category;
+﻿using Core.DTOs.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +9,10 @@ namespace DataAccess.Abstract
 {
     public interface IServiceDal
     {
-        Task<List<ResultCategoryDto>> GetAll();
-        void Add(CreateCategoryDto categoryDto);
+        Task<List<ResultServiceDto>> GetAll();
+        void Add(CreateServiceDto dto);
         void Delete(int id);
-        void Update(UpdateCategoryDto categoryDto);
-        Task<ResultCategoryDto> GetById(int id);
+        void Update(UpdateServiceDto dto);
+        Task<ResultServiceDto> GetById(int id);
     }
 }
