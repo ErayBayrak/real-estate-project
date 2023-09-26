@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-    public interface IPopularLocation
+    public interface IPopularLocationDal
     {
         Task<List<ResultPopularLocationDto>> GetAll();
         Task<ResultPopularLocationDto> GetById(int id);
