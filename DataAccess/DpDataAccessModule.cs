@@ -21,6 +21,7 @@ namespace DataAccess
             services.AddScoped<IProductDal, DpProductDal>();
             services.AddScoped<IWhoWeAreDetailDal, DpWhoWeAreDetailDal>();
             services.AddScoped<IServiceDal, DpServiceDal>();
+            services.AddScoped<IBottomGridDal, DpBottomGridDal>();
             services.AddScoped<Context>();
         }
     }
