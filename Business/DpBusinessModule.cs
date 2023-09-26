@@ -25,6 +25,7 @@ namespace Business
             services.AddScoped<IProductService,ProductManager>();
             services.AddScoped<IWhoWeAreDetailService,WhoWeAreDetailManager>();
             services.AddScoped<IServiceService,ServiceManager>();
+            services.AddScoped<IBottomGridService,BottomGridManager>();
         }
     }
 }
