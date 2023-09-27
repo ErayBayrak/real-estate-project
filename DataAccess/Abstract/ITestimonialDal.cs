@@ -1,4 +1,4 @@
-﻿using Core.DTOs.Category;
+﻿using Core.DTOs.Testimonial;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,6 @@ namespace DataAccess.Abstract
 {
     public interface ITestimonialDal
     {
-        Task<List<ResultCategoryDto>> GetAll();
+        Task<List<ResultTestimonialDto>> GetAll();
     }
 }
