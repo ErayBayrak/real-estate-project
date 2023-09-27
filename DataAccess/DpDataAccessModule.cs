@@ -23,6 +23,7 @@ namespace DataAccess
             services.AddScoped<IServiceDal, DpServiceDal>();
             services.AddScoped<IBottomGridDal, DpBottomGridDal>();
             services.AddScoped<IPopularLocationDal, DpPopularLocationDal>();
+            services.AddScoped<ITestimonialDal, DpTestimonialDal>();
             services.AddScoped<Context>();
         }
     }
