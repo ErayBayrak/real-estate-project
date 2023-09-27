@@ -2,7 +2,7 @@
 
 namespace WebUI.ViewComponents.HomePage
 {
-    public class _DefaultOurClientsComponentPartial:ViewComponent
+    public class _DefaultOurTestimonialComponentPartial:ViewComponent
     {
         public IViewComponentResult Invoke()
         {
